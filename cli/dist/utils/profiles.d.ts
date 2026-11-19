@@ -6,7 +6,6 @@ import type { DiscoveredResource } from "../types/index.js";
  * service.json. `flisk up` then leaves it out unless `--profile <name>` names one of its profiles, so the default run stays
  * small. A service without `profiles` always starts, and a service named with `--only` starts whatever its profiles.
  */
-export declare const PROFILE_NAME: RegExp;
 /** The profiles a service declares; empty when it has none (it then always starts). */
 export declare function profilesOf(resource: DiscoveredResource): string[];
 export interface ProfileSelection {

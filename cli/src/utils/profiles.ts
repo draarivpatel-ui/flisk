@@ -11,8 +11,6 @@ import type { DiscoveredResource } from "../types/index.js";
  * small. A service without `profiles` always starts, and a service named with `--only` starts whatever its profiles.
  */
 
-export const PROFILE_NAME = /^[a-z0-9][a-z0-9-]*$/;
-
 /** The profiles a service declares; empty when it has none (it then always starts). */
 export function profilesOf(resource: DiscoveredResource): string[] {
   const raw = (resource.config as Record<string, unknown> | undefined)?.profiles;
